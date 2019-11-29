@@ -1,0 +1,24 @@
+{% extends 'polls/base.html'%}
+
+{% block main_content %}
+
+<h1 class="mt-5">chose ?</h1>
+
+
+{% if latest_question%}
+
+<ul class="lead">
+{%for question in latest_question%}
+    <il>
+       <!--    "/polls/{{question.id}}" -->
+<a href={% url "polls:question_id" question.id %}> <p>{{question.question_text}}</p></a>
+        </il>
+{%endfor%}
+    </ul>
+
+{% else %}
+<p>You don't have any question</p>
+
+{% endif%}
+
+{% endblock %}

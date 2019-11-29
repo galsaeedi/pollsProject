@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Jekyll v3.8.5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap-4.3.1-dist/css/bootstrap.min.css'%}" />
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css'%}" />-->
+
+</head>
+<body class="d-flex flex-column h-100">
+
+
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+
+
+      {% block main_content %}
+      {% endblock %}
+
+
+  </div></main>
+ {%include "polls/footer.html"%}
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'polls/base.html'%}
+
+{% block main_content %}
+
+<b>{{question.question_text }} ?</b>
+
+<ul>
+    {% for qq in question.choice_set.all%}
+    <il>{{qq.choices_text}} -- {{qq.voit}}</il>
+    {%endfor%}
+
+</ul>
+
+<a href="{% url 'polls:question_id' question.id%}"> vote again <-- </a>
+{%endblock%}
